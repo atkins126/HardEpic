@@ -1,13 +1,13 @@
 object fMain: TfMain
   Left = 0
   Top = 0
+  BorderStyle = Single
   Caption = 'Form1'
   ClientHeight = 592
   ClientWidth = 320
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
-  FullScreen = True
   OnCreate = FormCreate
   OnShow = FormShow
   DesignerMasterStyle = 0

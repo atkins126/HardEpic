@@ -49,15 +49,15 @@ object fMenu: TfMenu
         object Label3: TLabel
           AutoSize = True
           StyledSettings = [Family]
-          Position.X = 1.000000000000000000
-          Position.Y = 44.000000000000000000
-          Size.Width = 83.000000000000000000
+          Position.X = 160.000000000000000000
+          Position.Y = 43.000000000000000000
+          Size.Width = 90.000000000000000000
           Size.Height = 47.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 35.000000000000000000
           TextSettings.FontColor = claDarkred
           TextSettings.WordWrap = False
-          Text = 'birth'
+          Text = ':birth'
         end
       end
     end
@@ -66,20 +66,20 @@ object fMenu: TfMenu
       Fill.Color = claWhitesmoke
       Padding.Left = 20.000000000000000000
       Padding.Right = 20.000000000000000000
-      Position.X = 75.665023803710940000
-      Position.Y = 208.634368896484400000
-      Size.Width = 164.729064941406200000
-      Size.Height = 34.772399902343750000
+      Position.X = 40.000000000000000000
+      Position.Y = 209.000000000000000000
+      Size.Width = 233.000000000000000000
+      Size.Height = 34.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = claGainsboro
       XRadius = 10.000000000000000000
       YRadius = 10.000000000000000000
       OnClick = Rectangle2Click
-      object Label4: TLabel
+      object lNewBirth: TLabel
         Align = Client
         StyledSettings = [Family]
-        Size.Width = 124.729064941406300000
-        Size.Height = 34.772399902343750000
+        Size.Width = 193.000000000000000000
+        Size.Height = 34.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 20.000000000000000000
         TextSettings.FontColor = claDimgray
@@ -92,20 +92,20 @@ object fMenu: TfMenu
       Fill.Color = claWhitesmoke
       Padding.Left = 20.000000000000000000
       Padding.Right = 20.000000000000000000
-      Position.X = 75.665023803710940000
-      Position.Y = 264.270202636718800000
-      Size.Width = 164.729064941406200000
-      Size.Height = 34.772399902343750000
+      Position.X = 40.000000000000000000
+      Position.Y = 264.000000000000000000
+      Size.Width = 233.000000000000000000
+      Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = claGainsboro
       XRadius = 10.000000000000000000
       YRadius = 10.000000000000000000
       OnClick = Rectangle3Click
-      object Label5: TLabel
+      object lContinue: TLabel
         Align = Client
         StyledSettings = [Family]
-        Size.Width = 124.729064941406300000
-        Size.Height = 34.772399902343750000
+        Size.Width = 193.000000000000000000
+        Size.Height = 35.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 20.000000000000000000
         TextSettings.FontColor = claDimgray
@@ -118,19 +118,17 @@ object fMenu: TfMenu
       Fill.Color = claWhitesmoke
       Padding.Left = 20.000000000000000000
       Padding.Right = 20.000000000000000000
-      Position.X = 75.665023803710940000
-      Position.Y = 319.906036376953200000
-      Size.Width = 164.729064941406200000
-      Size.Height = 34.772399902343750000
+      Position.X = 80.000000000000000000
+      Position.Y = 320.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = claGainsboro
-      XRadius = 10.000000000000000000
-      YRadius = 10.000000000000000000
-      object Label6: TLabel
+      object lLanguage: TLabel
         Align = Client
         StyledSettings = [Family]
-        Size.Width = 124.729064941406300000
-        Size.Height = 34.772399902343750000
+        Size.Width = 113.000000000000000000
+        Size.Height = 35.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 20.000000000000000000
         TextSettings.FontColor = claDimgray
@@ -152,16 +150,64 @@ object fMenu: TfMenu
       XRadius = 10.000000000000000000
       YRadius = 10.000000000000000000
       OnClick = Rectangle5Click
-      object Label7: TLabel
+      object lExit: TLabel
         Align = Client
         StyledSettings = [Family]
-        Size.Width = 67.980293273925790000
+        Size.Width = 67.980293273925780000
         Size.Height = 34.772399902343750000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 20.000000000000000000
         TextSettings.FontColor = claDimgray
         TextSettings.HorzAlign = Center
         Text = 'EXIT'
+      end
+    end
+    object RoundRect1: TRoundRect
+      Corners = [TopLeft, BottomLeft]
+      Fill.Color = claWhitesmoke
+      Padding.Left = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 320.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claGainsboro
+      OnClick = RoundRect1Click
+      object Label5: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 32.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = #9668
+      end
+    end
+    object RoundRect2: TRoundRect
+      Corners = [TopRight, BottomRight]
+      Fill.Color = claWhitesmoke
+      Padding.Left = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Position.X = 232.000000000000000000
+      Position.Y = 320.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claGainsboro
+      OnClick = RoundRect2Click
+      object Label4: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 32.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = #9658
       end
     end
   end

@@ -26,16 +26,17 @@ implementation
 {$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.iPhone55in.fmx IOS}
 
-uses uScreenManager, uConst;
+uses uScreenManager, uConst, uGameManager;
 
 procedure TfMain.FormCreate(Sender: TObject);
 begin
-    // показываем главное меню
+    // указываем объект-экран, в котором будут отображаться игровые окна
     SM.SetMainScreen(layScreen);
 end;
 
 procedure TfMain.FormShow(Sender: TObject);
 begin
+    GM.UpdateInterface([sMenu]);
     SM.ShowScreen(sMenu);
 end;
 

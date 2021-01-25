@@ -22,43 +22,31 @@ object fMap: TfMap
       Size.Height = 592.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
-      object lDayCaption: TLabel
+      object lDay: TLabel
         Align = Scale
         AutoSize = True
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Family, Style]
         Position.X = 11.000000000000000000
-        Position.Y = 563.000000000000000000
-        Size.Width = 33.000000000000000000
-        Size.Height = 20.000000000000000000
+        Position.Y = 547.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
-        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claSlategray
         TextSettings.WordWrap = False
         Text = 'Day:'
       end
-      object lDayValue: TLabel
+      object lRes: TLabel
         Align = Scale
         AutoSize = True
-        StyledSettings = [Family, FontColor]
-        Position.X = 42.000000000000000000
-        Position.Y = 564.000000000000000000
-        Size.Width = 31.000000000000000000
-        Size.Height = 20.000000000000000000
+        StyledSettings = [Family, Style]
+        Position.X = 11.000000000000000000
+        Position.Y = 567.000000000000000000
+        Size.Width = 27.000000000000000000
+        Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
-        TextSettings.Font.Size = 15.000000000000000000
-        TextSettings.Font.Style = [fsBold]
-        TextSettings.WordWrap = False
-        Text = '000'
-      end
-      object lResCaption: TLabel
-        Align = Scale
-        AutoSize = True
-        StyledSettings = [Family, Style, FontColor]
-        Position.X = 75.000000000000000000
-        Position.Y = 563.000000000000000000
-        Size.Width = 31.000000000000000000
-        Size.Height = 20.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claSlategray
         TextSettings.WordWrap = False
         Text = 'Res:'
       end
@@ -68,19 +56,19 @@ object fMap: TfMap
         Padding.Left = 10.000000000000000000
         Padding.Right = 10.000000000000000000
         Position.X = 234.000000000000000000
-        Position.Y = 552.000000000000000000
+        Position.Y = 544.000000000000000000
         Size.Width = 78.000000000000000000
-        Size.Height = 33.000000000000000000
+        Size.Height = 41.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = claGainsboro
         XRadius = 5.000000000000000000
         YRadius = 5.000000000000000000
         OnClick = Rectangle2Click
-        object Label4: TLabel
+        object lTurn: TLabel
           Align = Client
           StyledSettings = [Family]
           Size.Width = 58.000000000000000000
-          Size.Height = 33.000000000000000000
+          Size.Height = 41.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 15.000000000000000000
           TextSettings.FontColor = claDimgray
@@ -88,46 +76,38 @@ object fMap: TfMap
           Text = 'TURN'
         end
       end
-      object lResValue: TLabel
-        Align = Scale
-        AutoSize = True
-        StyledSettings = [Family, FontColor]
-        Position.X = 104.000000000000000000
-        Position.Y = 564.000000000000000000
-        Size.Width = 31.000000000000000000
-        Size.Height = 20.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Size = 15.000000000000000000
-        TextSettings.Font.Style = [fsBold]
-        TextSettings.WordWrap = False
-        Text = '000'
-      end
     end
-    object Rectangle3: TRectangle
+    object Layout3D1: TLayout3D
+      Height = 4.000000000000000000
+      Width = 5.000000000000000000
+    end
+    object lMP: TLabel
       Align = Scale
-      Fill.Color = claWhitesmoke
-      Padding.Left = 10.000000000000000000
-      Padding.Right = 10.000000000000000000
-      Position.X = 234.000000000000000000
-      Position.Y = 511.000000000000000000
-      Size.Width = 78.000000000000000000
-      Size.Height = 33.000000000000000000
+      AutoSize = True
+      StyledSettings = [Family, Style]
+      Position.X = 126.000000000000000000
+      Position.Y = 567.000000000000000000
+      Size.Width = 26.000000000000000000
+      Size.Height = 18.000000000000000000
       Size.PlatformDefault = False
-      Stroke.Color = claGainsboro
-      XRadius = 5.000000000000000000
-      YRadius = 5.000000000000000000
-      OnClick = Rectangle3Click
-      object Label1: TLabel
-        Align = Client
-        StyledSettings = [Family]
-        Size.Width = 58.000000000000000000
-        Size.Height = 33.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Size = 15.000000000000000000
-        TextSettings.FontColor = claDimgray
-        TextSettings.HorzAlign = Center
-        Text = 'DAY'
-      end
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claSlategray
+      TextSettings.WordWrap = False
+      Text = 'MP:'
+    end
+    object lIQ: TLabel
+      Align = Scale
+      AutoSize = True
+      StyledSettings = [Family, Style]
+      Position.X = 126.000000000000000000
+      Position.Y = 548.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claSlategray
+      TextSettings.WordWrap = False
+      Text = 'IQ:'
     end
   end
 end
