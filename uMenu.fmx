@@ -1,0 +1,168 @@
+object fMenu: TfMenu
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 592
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object layForm: TLayout
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 592.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 592.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Label1: TLabel
+        Align = Scale
+        AutoSize = True
+        StyledSettings = [Family, FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 56.000000000000000000
+        Size.Width = 158.000000000000000000
+        Size.Height = 67.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 50.000000000000000000
+        TextSettings.Font.Style = [fsBold]
+        TextSettings.WordWrap = False
+        Text = 'HARD'
+        object Label2: TLabel
+          AutoSize = True
+          StyledSettings = [Family, FontColor]
+          Position.X = 142.000000000000000000
+          Size.Width = 112.000000000000000000
+          Size.Height = 67.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.WordWrap = False
+          Text = 'EPIC'
+        end
+        object Label3: TLabel
+          AutoSize = True
+          StyledSettings = [Family]
+          Position.X = 1.000000000000000000
+          Position.Y = 44.000000000000000000
+          Size.Width = 83.000000000000000000
+          Size.Height = 47.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = claDarkred
+          TextSettings.WordWrap = False
+          Text = 'birth'
+        end
+      end
+    end
+    object Rectangle2: TRectangle
+      Align = Scale
+      Fill.Color = claWhitesmoke
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Position.X = 75.665023803710940000
+      Position.Y = 208.634368896484400000
+      Size.Width = 164.729064941406200000
+      Size.Height = 34.772399902343750000
+      Size.PlatformDefault = False
+      Stroke.Color = claGainsboro
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      OnClick = Rectangle2Click
+      object Label4: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 124.729064941406300000
+        Size.Height = 34.772399902343750000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = 'NEW BIRTH'
+      end
+    end
+    object Rectangle3: TRectangle
+      Align = Scale
+      Fill.Color = claWhitesmoke
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Position.X = 75.665023803710940000
+      Position.Y = 264.270202636718800000
+      Size.Width = 164.729064941406200000
+      Size.Height = 34.772399902343750000
+      Size.PlatformDefault = False
+      Stroke.Color = claGainsboro
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      OnClick = Rectangle3Click
+      object Label5: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 124.729064941406300000
+        Size.Height = 34.772399902343750000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = 'CONTINUE'
+      end
+    end
+    object Rectangle4: TRectangle
+      Align = Scale
+      Fill.Color = claWhitesmoke
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Position.X = 75.665023803710940000
+      Position.Y = 319.906036376953200000
+      Size.Width = 164.729064941406200000
+      Size.Height = 34.772399902343750000
+      Size.PlatformDefault = False
+      Stroke.Color = claGainsboro
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object Label6: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 124.729064941406300000
+        Size.Height = 34.772399902343750000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = 'LANGUAGE'
+      end
+    end
+    object Rectangle5: TRectangle
+      Align = Scale
+      Fill.Color = claWhitesmoke
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Position.X = 101.674873352050800000
+      Position.Y = 465.950073242187500000
+      Size.Width = 107.980293273925800000
+      Size.Height = 34.772399902343750000
+      Size.PlatformDefault = False
+      Stroke.Color = claGainsboro
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      OnClick = Rectangle5Click
+      object Label7: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 67.980293273925790000
+        Size.Height = 34.772399902343750000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = 'EXIT'
+      end
+    end
+  end
+end

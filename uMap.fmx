@@ -1,0 +1,133 @@
+object fMap: TfMap
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 592
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object layForm: TLayout
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 592.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 592.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object lDayCaption: TLabel
+        Align = Scale
+        AutoSize = True
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 11.000000000000000000
+        Position.Y = 563.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.WordWrap = False
+        Text = 'Day:'
+      end
+      object lDayValue: TLabel
+        Align = Scale
+        AutoSize = True
+        StyledSettings = [Family, FontColor]
+        Position.X = 42.000000000000000000
+        Position.Y = 564.000000000000000000
+        Size.Width = 31.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.Style = [fsBold]
+        TextSettings.WordWrap = False
+        Text = '000'
+      end
+      object lResCaption: TLabel
+        Align = Scale
+        AutoSize = True
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 75.000000000000000000
+        Position.Y = 563.000000000000000000
+        Size.Width = 31.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.WordWrap = False
+        Text = 'Res:'
+      end
+      object Rectangle2: TRectangle
+        Align = Scale
+        Fill.Color = claWhitesmoke
+        Padding.Left = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Position.X = 234.000000000000000000
+        Position.Y = 552.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claGainsboro
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        OnClick = Rectangle2Click
+        object Label4: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Size.Width = 58.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.FontColor = claDimgray
+          TextSettings.HorzAlign = Center
+          Text = 'TURN'
+        end
+      end
+      object lResValue: TLabel
+        Align = Scale
+        AutoSize = True
+        StyledSettings = [Family, FontColor]
+        Position.X = 104.000000000000000000
+        Position.Y = 564.000000000000000000
+        Size.Width = 31.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.Style = [fsBold]
+        TextSettings.WordWrap = False
+        Text = '000'
+      end
+    end
+    object Rectangle3: TRectangle
+      Align = Scale
+      Fill.Color = claWhitesmoke
+      Padding.Left = 10.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Position.X = 234.000000000000000000
+      Position.Y = 511.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claGainsboro
+      XRadius = 5.000000000000000000
+      YRadius = 5.000000000000000000
+      OnClick = Rectangle3Click
+      object Label1: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 58.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = 'DAY'
+      end
+    end
+  end
+end
