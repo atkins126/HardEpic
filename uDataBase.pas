@@ -25,6 +25,7 @@ const
              menu_language + ':"ENGLISH",'+
              menu_exit + ':"EXIT",'+
              // êíîïêè
+             lbl_map + ':"... MAP ...",'+
              btn_turn + ':"DAY",'+
              lbl_day + ':"Day",'+
              lbl_res + ':"Res.",'+
@@ -38,6 +39,7 @@ const
              menu_language + ':"ĞÓÑÑÊÈÉ",'+
              menu_exit + ':"ÂÛÕÎÄ",'+
 
+             lbl_map + ':"... ÊÀĞÒÀ ...",'+
              btn_turn + ':"ÄÅÍÜ",'+
              lbl_day + ':"Äåíü",'+
              lbl_res + ':"Ğåñ.",'+

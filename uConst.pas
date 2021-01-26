@@ -19,6 +19,7 @@ const
   lbl_res = 'lbl_res';
   lbl_mp = 'lbl_mp';
   lbl_iq = 'lbl_iq';
+  lbl_map = 'lbl_map';
 
 var
   Lang : array[0..1] of string = ('eng','ru');

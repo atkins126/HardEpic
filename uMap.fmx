@@ -15,7 +15,7 @@ object fMap: TfMap
     Size.Height = 592.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    object Rectangle1: TRectangle
+    object rBG: TRectangle
       Align = Client
       Fill.Color = claWhite
       Size.Width = 320.000000000000000000
@@ -32,7 +32,7 @@ object fMap: TfMap
         Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 13.000000000000000000
-        TextSettings.FontColor = claSlategray
+        TextSettings.FontColor = claDarkslategray
         TextSettings.WordWrap = False
         Text = 'Day:'
       end
@@ -46,11 +46,11 @@ object fMap: TfMap
         Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 13.000000000000000000
-        TextSettings.FontColor = claSlategray
+        TextSettings.FontColor = claDarkslategray
         TextSettings.WordWrap = False
         Text = 'Res:'
       end
-      object Rectangle2: TRectangle
+      object bTurn: TRectangle
         Align = Scale
         Fill.Color = claWhitesmoke
         Padding.Left = 10.000000000000000000
@@ -63,7 +63,7 @@ object fMap: TfMap
         Stroke.Color = claGainsboro
         XRadius = 5.000000000000000000
         YRadius = 5.000000000000000000
-        OnClick = Rectangle2Click
+        OnClick = bTurnClick
         object lTurn: TLabel
           Align = Client
           StyledSettings = [Family]
@@ -71,43 +71,153 @@ object fMap: TfMap
           Size.Height = 41.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 15.000000000000000000
-          TextSettings.FontColor = claDimgray
+          TextSettings.FontColor = claDarkslategray
           TextSettings.HorzAlign = Center
           Text = 'TURN'
         end
       end
-    end
-    object Layout3D1: TLayout3D
-      Height = 4.000000000000000000
-      Width = 5.000000000000000000
-    end
-    object lMP: TLabel
-      Align = Scale
-      AutoSize = True
-      StyledSettings = [Family, Style]
-      Position.X = 126.000000000000000000
-      Position.Y = 567.000000000000000000
-      Size.Width = 26.000000000000000000
-      Size.Height = 18.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 13.000000000000000000
-      TextSettings.FontColor = claSlategray
-      TextSettings.WordWrap = False
-      Text = 'MP:'
-    end
-    object lIQ: TLabel
-      Align = Scale
-      AutoSize = True
-      StyledSettings = [Family, Style]
-      Position.X = 126.000000000000000000
-      Position.Y = 548.000000000000000000
-      Size.Width = 20.000000000000000000
-      Size.Height = 18.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 13.000000000000000000
-      TextSettings.FontColor = claSlategray
-      TextSettings.WordWrap = False
-      Text = 'IQ:'
+      object lMP: TLabel
+        Align = Scale
+        AutoSize = True
+        StyledSettings = [Family, Style]
+        Position.X = 126.000000000000000000
+        Position.Y = 567.000000000000000000
+        Size.Width = 26.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claDarkslategray
+        TextSettings.WordWrap = False
+        Text = 'MP:'
+      end
+      object lMap: TLabel
+        Align = Scale
+        StyledSettings = [Family, Size]
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 305.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Style = [fsBold]
+        TextSettings.FontColor = claDarkslategray
+        TextSettings.HorzAlign = Center
+        Text = '... MAP ...'
+      end
+      object lIQ: TLabel
+        Align = Scale
+        AutoSize = True
+        StyledSettings = [Family, Style]
+        Position.X = 126.000000000000000000
+        Position.Y = 548.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claDarkslategray
+        TextSettings.WordWrap = False
+        Text = 'IQ:'
+      end
+      object VertScrollBox1: TVertScrollBox
+        Position.X = 8.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 305.000000000000000000
+        Size.Height = 465.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Viewport.Width = 305.000000000000000000
+        Viewport.Height = 465.000000000000000000
+        object FlowLayout1: TFlowLayout
+          Align = Scale
+          Size.Width = 305.000000000000000000
+          Size.Height = 385.233917236328100000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Justify = Left
+          JustifyLastLine = Left
+          FlowDirection = LeftToRight
+          object flayMapItem: TFlowLayout
+            Size.Width = 313.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Justify = Left
+            JustifyLastLine = Left
+            FlowDirection = LeftToRight
+            object Label1: TLabel
+              AutoSize = True
+              StyledSettings = [Family, Size, FontColor]
+              Size.Width = 19.000000000000000000
+              Size.Height = 16.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Style = [fsBold]
+              TextSettings.WordWrap = False
+              Text = '[1]'
+            end
+            object Label2: TLabel
+              AutoSize = True
+              StyledSettings = [Family, Size, FontColor]
+              Margins.Left = 5.000000000000000000
+              Position.X = 24.000000000000000000
+              Size.Width = 49.000000000000000000
+              Size.Height = 16.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Style = [fsUnderline]
+              TextSettings.WordWrap = False
+              Text = #1057#1090#1077#1087#1100'(3)'
+            end
+            object Label3: TLabel
+              AutoSize = True
+              StyledSettings = [Family, Size, FontColor]
+              Margins.Left = 5.000000000000000000
+              Position.X = 78.000000000000000000
+              Size.Width = 116.000000000000000000
+              Size.Height = 16.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Style = [fsUnderline]
+              TextSettings.WordWrap = False
+              Text = #1055#1086#1083#1077' '#1087#1096#1077#1085#1080#1094#1099'(1,5'#1082')'
+            end
+            object Label4: TLabel
+              AutoSize = True
+              StyledSettings = [Family, Size, FontColor]
+              Margins.Left = 5.000000000000000000
+              Position.X = 199.000000000000000000
+              Size.Width = 54.000000000000000000
+              Size.Height = 16.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Style = [fsUnderline]
+              TextSettings.WordWrap = False
+              Text = #1060#1077#1088#1084#1072'(1)'
+            end
+          end
+        end
+      end
+      object Rectangle1: TRectangle
+        Align = Scale
+        Fill.Color = claWhitesmoke
+        Padding.Left = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Position.X = 272.000000000000000000
+        Position.Y = 504.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claGainsboro
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        OnClick = bTurnClick
+        object Label5: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Size.Width = 31.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.FontColor = claDarkslategray
+          TextSettings.HorzAlign = Center
+          Text = 'ALL'
+        end
+      end
     end
   end
 end

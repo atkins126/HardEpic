@@ -107,6 +107,8 @@ begin
     if sMap in scr then
     begin
         buf := SO();
+        buf.S[lbl_map] := GetText(lbl_map);
+
         buf.S[btn_turn] := GetText(btn_turn);
         buf.S[lbl_day]  := GetText(lbl_day);
         buf.S[lbl_res]  := GetText(lbl_res);

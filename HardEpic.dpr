@@ -11,7 +11,8 @@ uses
   uDataBase in 'uDataBase.pas',
   XSuperJSON in 'x-superobject-master\XSuperJSON.pas',
   XSuperObject in 'x-superobject-master\XSuperObject.pas',
-  uConst in 'uConst.pas';
+  uConst in 'uConst.pas',
+  uAtlas in 'uAtlas.pas' {fAtlas};
 
 {$R *.res}
 
@@ -20,5 +21,6 @@ begin
   Application.CreateForm(TfMain, fMain);
   Application.CreateForm(TfMenu, fMenu);
   Application.CreateForm(TfMap, fMap);
+  Application.CreateForm(TfAtlas, fAtlas);
   Application.Run;
 end.

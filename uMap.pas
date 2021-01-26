@@ -12,15 +12,24 @@ type
   TfMap = class(TForm)
     layForm: TLayout;
     lDay: TLabel;
-    Rectangle1: TRectangle;
+    rBG: TRectangle;
     lRes: TLabel;
-    Rectangle2: TRectangle;
+    bTurn: TRectangle;
     lTurn: TLabel;
-    Layout3D1: TLayout3D;
     lMP: TLabel;
     lIQ: TLabel;
+    FlowLayout1: TFlowLayout;
+    lMap: TLabel;
+    VertScrollBox1: TVertScrollBox;
+    flayMapItem: TFlowLayout;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Rectangle1: TRectangle;
+    Label5: TLabel;
     procedure FormCreate(Sender: TObject);
-    procedure Rectangle2Click(Sender: TObject);
+    procedure bTurnClick(Sender: TObject);
     procedure Rectangle3Click(Sender: TObject);
   private
     { Private declarations }
@@ -43,7 +52,7 @@ begin
    SM.AddScreen(sMap, layForm);
 end;
 
-procedure TfMap.Rectangle2Click(Sender: TObject);
+procedure TfMap.bTurnClick(Sender: TObject);
 begin
    SM.ShowScreen(sMenu);
 end;
@@ -60,6 +69,8 @@ begin
    if not Assigned(data) then exit;
 
    // обновляем текст интерфейса текущим языком
+   if Assigned(data[lbl_map]) then lMap.Text := data.S[lbl_map];
+
    if Assigned(data[btn_turn]) then lTurn.Text := data.S[btn_turn];
    if Assigned(data[lbl_day]) then lDay.Text := data.S[lbl_day];
    if Assigned(data[lbl_res]) then lRes.Text := data.S[lbl_res];
