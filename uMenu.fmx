@@ -163,6 +163,7 @@ object fMenu: TfMenu
       end
     end
     object RoundRect1: TRoundRect
+      Align = Scale
       Corners = [TopLeft, BottomLeft]
       Fill.Color = claWhitesmoke
       Padding.Left = 5.000000000000000000
@@ -187,6 +188,7 @@ object fMenu: TfMenu
       end
     end
     object RoundRect2: TRoundRect
+      Align = Scale
       Corners = [TopRight, BottomRight]
       Fill.Color = claWhitesmoke
       Padding.Left = 5.000000000000000000
