@@ -14,6 +14,7 @@ type
         procedure ContinueGame;
         procedure LoadGame;
         procedure SaveGame;
+        procedure RemoveGame;
         procedure UpdateInterface(scr: TScrSet);
         procedure IncDay(delta: integer = 0);
         function GetText(text_id: string): string;
@@ -44,6 +45,11 @@ begin
     lang := DB.O['state'].I['lang'];
     DB := SO(DBjson);
     DB.O['state'].I['lang'] := lang;
+end;
+
+procedure TGameManager.RemoveGame;
+begin
+    DeleteFile(TPath.GetHomePath + TPath.DirectorySeparatorChar + 'game.dat');
 end;
 
 function TGameManager.GetText(text_id: string): string;
@@ -81,6 +87,9 @@ procedure TGameManager.LoadGame;
 begin
    // подгружаем раздел состояния из файла. пути берутся исходя из платформы
    DB.O['state'] := TSuperObject.ParseFile(TPath.GetHomePath + TPath.DirectorySeparatorChar + 'game.dat', false);
+
+   // корректировка старых сейвов
+   DB.O['state'].I['lang'] := StrToIntDef(DB.O['state'].V['lang'], 0);
 end;
 
 procedure TGameManager.SaveGame;
