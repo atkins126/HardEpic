@@ -3,7 +3,7 @@ inherited Form1_iPhone55in: TForm1_iPhone55in
   ClientWidth = 414
   DesignerMasterStyle = 3
   inherited layScreen: TLayout
-    Size.Width = 414.000000000000000000
-    Size.Height = 716.000000000000000000
+    Size.Width = 828.000000000000000000
+    Size.Height = 1432.000000000000000000
   end
 end

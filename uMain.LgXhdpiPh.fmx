@@ -3,7 +3,7 @@ inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
   ClientWidth = 450
   DesignerMasterStyle = 3
   inherited layScreen: TLayout
-    Size.Width = 450.000000000000000000
-    Size.Height = 695.000000000000000000
+    Size.Width = 900.000000000000000000
+    Size.Height = 1390.000000000000000000
   end
 end

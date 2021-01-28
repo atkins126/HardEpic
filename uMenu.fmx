@@ -23,7 +23,6 @@ object fMenu: TfMenu
       Size.PlatformDefault = False
       Stroke.Kind = None
       object Label1: TLabel
-        Align = Scale
         AutoSize = True
         StyledSettings = [Family, FontColor]
         Position.X = 39.000000000000000000
@@ -62,7 +61,6 @@ object fMenu: TfMenu
       end
     end
     object Rectangle2: TRectangle
-      Align = Scale
       Fill.Color = claWhitesmoke
       Padding.Left = 20.000000000000000000
       Padding.Right = 20.000000000000000000
@@ -81,14 +79,13 @@ object fMenu: TfMenu
         Size.Width = 193.000000000000000000
         Size.Height = 34.000000000000000000
         Size.PlatformDefault = False
-        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.Size = 18.000000000000000000
         TextSettings.FontColor = claDimgray
         TextSettings.HorzAlign = Center
         Text = 'NEW BIRTH'
       end
     end
     object Rectangle3: TRectangle
-      Align = Scale
       Fill.Color = claWhitesmoke
       Padding.Left = 20.000000000000000000
       Padding.Right = 20.000000000000000000
@@ -107,14 +104,13 @@ object fMenu: TfMenu
         Size.Width = 193.000000000000000000
         Size.Height = 35.000000000000000000
         Size.PlatformDefault = False
-        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.Size = 18.000000000000000000
         TextSettings.FontColor = claDimgray
         TextSettings.HorzAlign = Center
         Text = 'CONTINUE'
       end
     end
     object Rectangle4: TRectangle
-      Align = Scale
       Fill.Color = claWhitesmoke
       Padding.Left = 20.000000000000000000
       Padding.Right = 20.000000000000000000
@@ -130,14 +126,13 @@ object fMenu: TfMenu
         Size.Width = 113.000000000000000000
         Size.Height = 35.000000000000000000
         Size.PlatformDefault = False
-        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.Size = 18.000000000000000000
         TextSettings.FontColor = claDimgray
         TextSettings.HorzAlign = Center
         Text = 'LANGUAGE'
       end
     end
     object Rectangle5: TRectangle
-      Align = Scale
       Fill.Color = claWhitesmoke
       Padding.Left = 20.000000000000000000
       Padding.Right = 20.000000000000000000
@@ -156,14 +151,13 @@ object fMenu: TfMenu
         Size.Width = 67.980293273925780000
         Size.Height = 34.772399902343750000
         Size.PlatformDefault = False
-        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.Size = 18.000000000000000000
         TextSettings.FontColor = claDimgray
         TextSettings.HorzAlign = Center
         Text = 'EXIT'
       end
     end
     object RoundRect1: TRoundRect
-      Align = Scale
       Corners = [TopLeft, BottomLeft]
       Fill.Color = claWhitesmoke
       Padding.Left = 5.000000000000000000
@@ -188,7 +182,6 @@ object fMenu: TfMenu
       end
     end
     object RoundRect2: TRoundRect
-      Align = Scale
       Corners = [TopRight, BottomRight]
       Fill.Color = claWhitesmoke
       Padding.Left = 5.000000000000000000

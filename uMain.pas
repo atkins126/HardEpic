@@ -13,6 +13,7 @@ type
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    initWidth, initHeight: integer;
   public
     { Public declarations }
   end;
@@ -30,12 +31,31 @@ uses uScreenManager, uConst, uGameManager;
 
 procedure TfMain.FormCreate(Sender: TObject);
 begin
+
+{$IFDEF MSWINDOWS}
+    fMain.FullScreen := false;
+{$ENDIF}
+{$IFDEF ANDROID}
+    fMain.FullScreen := true;
+{$ENDIF}
+
     // указываем объект-экран, в котором будут отображаться игровые окна
     SM.SetMainScreen(layScreen);
+
+    // при старте программы запоминаем исходные размеры экрана, под который делался интерфейс
+    initHeight := ClientHeight;
+    initWidth := ClientWidth;
 end;
 
 procedure TfMain.FormShow(Sender: TObject);
 begin
+    // при показе форма уже растянулась на весь экран.
+    // врубаем масштабирование, чтобы под него подстроиться.
+    // примерно так же сработал бы Align = Scale, но он не умеет масштабировать текст
+    layScreen.Scale.X := ClientWidth / initWidth;
+    layScreen.Scale.Y := ClientHeight / initHeight;
+
+    // отображаем главное меню
     GM.UpdateInterface([sMenu]);
     SM.ShowScreen(sMenu);
 end;
