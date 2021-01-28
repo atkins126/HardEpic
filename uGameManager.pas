@@ -2,7 +2,7 @@ unit uGameManager;
 
 interface
 
-uses XSuperObject, uConst, SysUtils;
+uses XSuperObject, uConst, SysUtils, Math;
 
 type
     TScrSet = set of TScreenTypes;
@@ -16,11 +16,15 @@ type
         procedure SaveGame;
         procedure RemoveGame;
         procedure UpdateInterface(scr: TScrSet);
-        procedure IncDay(delta: integer = 0);
+        function IncDay(delta: integer = 1): boolean;
         function GetText(text_id: string): string;
         function GetLang: string;
         procedure DecLanguage;
         procedure IncLanguage;
+
+        procedure UpdateGame;
+        /// ключевой метод. полностью пересчитывает логику игры, отрабатыва€ все событи€ и эффекты
+        /// на 1 ход, обновл€€ состо€ни€ всех объектов
     end;
 
 var
@@ -70,9 +74,14 @@ begin
     result := Lang[DB.O['state'].I['lang']];
 end;
 
-procedure TGameManager.IncDay(delta: integer = 0);
+function TGameManager.IncDay(delta: integer = 1): boolean;
 begin
     DB.O['state'].I['day'] := DB.O['state'].I['day'] + delta;
+
+    // измен€ем количество ресурсов. однако, ниже нул€ их быть не может
+    DB.O['state'].I['res'] := Max(DB.O['state'].I['res'] + DB.O['state'].I['res_inc'] * delta, 0);
+    DB.O['state'].I['mp']  := Max(DB.O['state'].I['mp']  + DB.O['state'].I['mp_inc'] * delta, 0);
+    DB.O['state'].I['iq']  := Max(DB.O['state'].I['iq']  + DB.O['state'].I['iq_inc'] * delta, 0);
 end;
 
 procedure TGameManager.IncLanguage;
@@ -98,6 +107,12 @@ begin
    GM.DB['state'].AsObject.SaveTo(TPath.GetHomePath + TPath.DirectorySeparatorChar + 'game.dat');
 end;
 
+procedure TGameManager.UpdateGame;
+/// пересчитываем состо€ние игры
+begin
+
+end;
+
 procedure TGameManager.UpdateInterface(scr: TScrSet);
 /// обновление экранов. в цел€х оптимизации
 var
@@ -118,11 +133,9 @@ begin
         buf := SO();
         buf.S[lbl_map] := GetText(lbl_map);
 
-        buf.S[btn_turn] := GetText(btn_turn);
-        buf.S[lbl_day]  := GetText(lbl_day);
-        buf.S[lbl_res]  := GetText(lbl_res);
-        buf.S[lbl_mp]   := GetText(lbl_mp);
-        buf.S[lbl_iq]   := GetText(lbl_iq);
+        buf.S[btn_turn]   := GetText(btn_turn);
+        buf.S[lbl_day]    := GetText(lbl_day);
+        buf.S[lbl_all]    := GetText(lbl_all);
 
         buf.S['day'] := IntToStr(DB.O['state'].I['day']);
         buf.S['res'] := IntToStr(DB.O['state'].I['res']);
@@ -132,6 +145,8 @@ begin
         buf.S['res_inc'] := IntToStr(DB.O['state'].I['res_inc']);
         buf.S['mp_inc'] := IntToStr(DB.O['state'].I['mp_inc']);
         buf.S['iq_inc'] := IntToStr(DB.O['state'].I['iq_inc']);
+
+        buf.S['event_count'] := DB.O['state'].V['event_count'];
 
         fMap.Update(buf);
     end;
