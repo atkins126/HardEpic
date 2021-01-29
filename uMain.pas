@@ -4,7 +4,8 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Platform;
 
 type
   TfMain = class(TForm)
@@ -14,6 +15,7 @@ type
   private
     { Private declarations }
     initWidth, initHeight: integer;
+    scale: real;
   public
     { Public declarations }
   end;
@@ -48,12 +50,26 @@ begin
 end;
 
 procedure TfMain.FormShow(Sender: TObject);
+var
+ ScreenSvc: IFMXScreenService;
 begin
+    Scale := 1;
+//    if TPlatformServices.Current.SupportsPlatformService(IFMXScreenService, IInterface(ScreenSvc))
+//    then Scale := ScreenSvc.GetScreenScale;
+
     // при показе форма уже растянулась на весь экран.
     // врубаем масштабирование, чтобы под него подстроиться.
     // примерно так же сработал бы Align = Scale, но он не умеет масштабировать текст
-    layScreen.Scale.X := ClientWidth / initWidth;
-    layScreen.Scale.Y := ClientHeight / initHeight;
+    layScreen.Scale.X := ClientWidth / initWidth / Scale;
+    layScreen.Scale.Y := ClientHeight / initHeight / Scale;
+
+{
+    lStat.Text := Format('W:%d|%d|%f H:%d|%d|%f S:%f',[
+        initWidth, ClientWidth, layScreen.Scale.X,
+        initHeight, ClientHeight, layScreen.Scale.Y,
+        Scale
+    ]);
+}
 
     // отображаем главное меню
     GM.UpdateInterface([sMenu]);
