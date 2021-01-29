@@ -43,10 +43,10 @@ type
     Image2: TImage;
     Image3: TImage;
     Image4: TImage;
-    Image5: TImage;
-    Image6: TImage;
+    iWar: TImage;
+    iEconomy: TImage;
     rNature: TRectangle;
-    Image7: TImage;
+    iNature: TImage;
     FlowLayout2: TFlowLayout;
     Label2: TLabel;
     Label5: TLabel;
@@ -143,21 +143,45 @@ end;
 
 procedure TfMap.SetFilter(const Value: TFilterState);
 begin
-    if Value = fsNature
-    then rNature.Stroke.Kind := TBrushKind.Solid
-    else rNature.Stroke.Kind := TBrushKind.None;
+    if Value = fsNature then
+    begin
+        rNature.Stroke.Kind := TBrushKind.Solid;
+        iNature.Opacity := 0.75;
+    end else
+    begin
+        rNature.Stroke.Kind := TBrushKind.None;
+        iNature.Opacity := 0.25;
+    end;
 
-    if Value = fsWar
-    then rWar.Stroke.Kind := TBrushKind.Solid
-    else rWar.Stroke.Kind := TBrushKind.None;
+    if Value = fsWar then
+    begin
+        rWar.Stroke.Kind := TBrushKind.Solid;
+        iWar.Opacity := 0.75;
+    end else
+    begin
+        rWar.Stroke.Kind := TBrushKind.None;
+        iWar.Opacity := 0.25;
+    end;
 
-    if Value = fsEconomy
-    then rEconomy.Stroke.Kind := TBrushKind.Solid
-    else rEconomy.Stroke.Kind := TBrushKind.None;
+    if Value = fsEconomy then
+    begin
+        rEconomy.Stroke.Kind := TBrushKind.Solid;
+        iEconomy.Opacity := 0.75;
+    end else
+    begin
+        rEconomy.Stroke.Kind := TBrushKind.None;
+        iEconomy.Opacity := 0.25;
+    end;
 
-    if Value = fsAll
-    then rAll.Stroke.Kind := TBrushKind.Solid
-    else rAll.Stroke.Kind := TBrushKind.None;
+    if Value = fsAll then
+    begin
+        rAll.Stroke.Kind := TBrushKind.Solid;
+        lAll.TextSettings.Font.Style := lAll.TextSettings.Font.Style + [TFontStyle.fsBold];
+    end else
+    begin
+        rAll.Stroke.Kind := TBrushKind.None;
+        lAll.TextSettings.Font.Style := lAll.TextSettings.Font.Style - [TFontStyle.fsBold];
+    end;
 end;
 
 procedure TfMap.bTurnClick(Sender: TObject);
